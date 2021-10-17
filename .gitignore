@@ -1,10 +1,16 @@
 Lab_2/BitArrayTesting/.idea
-
 Lab_2/BitArrayTesting/BitArrayExtensions/bin
 Lab_2/BitArrayTesting/BitArrayExtensions/obj
-
 Lab_2/BitArrayTesting/BitArrayXUnit/bin
 Lab_2/BitArrayTesting/BitArrayXUnit/obj
+
+Lab_3/BitArrayTesting/.idea
+Lab_3/BitArrayTesting/BitArrayExtensions/bin
+Lab_3/BitArrayTesting/BitArrayExtensions/obj
+Lab_3/BitArrayTesting/BitArrayNUnit/bin
+Lab_3/BitArrayTesting/BitArrayNUnit/obj
+Lab_3/BitArrayTesting/BitArrayXUnit/bin
+Lab_3/BitArrayTesting/BitArrayXUnit/obj
 
 *.docx
 *.7z
