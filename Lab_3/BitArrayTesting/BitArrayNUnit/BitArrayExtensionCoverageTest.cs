@@ -10,6 +10,26 @@ namespace BitArrayNUnit
         public void Setup()
         {
         }
+        
+        [Test]
+        public void TestTripleAndTrue()
+        {
+            var first = BitArrayExtension.ParseFromString("11011");
+            var second = BitArrayExtension.ParseFromString("true,True,false,true,true");
+            var third = new BitArray(new bool[] { true, true, false, true, true });
+
+            Assert.True(BitArrayExtension.TripleAnd(first, second, third));
+        }
+        
+        [Test]
+        public void TestTripleAndFalse()
+        {
+            var first = BitArrayExtension.ParseFromString("11011");
+            var second = BitArrayExtension.ParseFromString("true,True,false,true,true");
+            var third = new BitArray(new bool[] { true, true, true, true, true });
+
+            Assert.False(BitArrayExtension.TripleAnd(first, second, third));
+        }
 
         [Test]
         public void TestFromNumeric()

@@ -100,7 +100,7 @@ namespace BitArrayExtensions
             }
             else
             {
-                if (Regex.IsMatch(input, @"^(true,)*(false,)*(true|false)?$",
+                if (Regex.IsMatch(input, @"^(true,|false,)*(true|false){1}$",
                     RegexOptions.Compiled | RegexOptions.IgnoreCase))
                 {
                     type = InputType.Boolean;
@@ -158,6 +158,27 @@ namespace BitArrayExtensions
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Extension "triple and" method
+        /// </summary>
+        /// <param name="first">First BitArray instance for comparison</param>
+        /// <param name="second">Second BitArray instance for comparison</param>
+        /// <param name="third">Third BitArray instance for comparison</param>
+        /// <returns>"Triple and" result</returns>
+        public static bool TripleAnd(BitArray first, BitArray second, BitArray third)
+        {
+            // if (first.Equal(second))
+            // {
+            //     if (second.Equal(third))
+            //     {
+            //         return true;
+            //     }
+            // }
+            //
+            // return false;
+            return first.Equal(second) && second.Equal(third);
         }
     }
 }
