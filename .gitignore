@@ -12,5 +12,11 @@ Lab_3/BitArrayTesting/BitArrayNUnit/obj
 Lab_3/BitArrayTesting/BitArrayXUnit/bin
 Lab_3/BitArrayTesting/BitArrayXUnit/obj
 
+Lab_4/BitArrayTesting/.idea
+Lab_4/BitArrayTesting/BitArrayExtensions/bin
+Lab_4/BitArrayTesting/BitArrayExtensions/obj
+Lab_4/BitArrayTesting/BitArrayNUnit/bin
+Lab_4/BitArrayTesting/BitArrayNUnit/obj
+
 *.docx
 *.7z
