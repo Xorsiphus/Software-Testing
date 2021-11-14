@@ -73,46 +73,12 @@ namespace BitArrayExtensions.Calc
             {
                 BitArrayOperation.And => firstArray.And(arg),
                 BitArrayOperation.Or => firstArray.Or(arg),
-                BitArrayOperation.Comp => CompareTo(firstArray, arg) > 0 ? firstArray : arg,
-                BitArrayOperation.Impl => MaterialImplication(firstArray, arg),
+                BitArrayOperation.Comp => BitArrayExtension.Compare(firstArray, arg) > 0 ? firstArray : arg,
+                BitArrayOperation.Impl => BitArrayExtension.MaterialImplication(firstArray, arg),
                 _ => throw new ArgumentOutOfRangeException()
             };
 
             _currentArray = result;
-        }
-
-        private BitArray MaterialImplication(BitArray firstArray, BitArray secondArray)
-        {
-            if (firstArray.Length != secondArray.Length)
-                throw new ArgumentException("Array lengths must be the same.");
-
-            bool[] result = new bool[firstArray.Length];
-
-            for (var i = 0;
-                i < firstArray.Length;
-                i++)
-            {
-                result[i] = !firstArray[i] | secondArray[i];
-                Console.WriteLine(result[i]);
-            }
-
-            return new BitArray(result);
-        }
-
-        private int CompareTo(BitArray firstArray, BitArray secondArray)
-        {
-            if (firstArray.Length != secondArray.Length)
-                throw new ArgumentException("Array lengths must be the same.");
-
-            for (var i = 0; i < firstArray.Length; i++)
-            {
-                if (firstArray[i] && !secondArray[i])
-                    return 1;
-                if (!firstArray[i] && secondArray[i])
-                    return -1;
-            }
-
-            return 0;
         }
 
         private void NextState()
@@ -122,7 +88,7 @@ namespace BitArrayExtensions.Calc
                 BitArrayCalcState.WaitingForStart => BitArrayCalcState.WaitingForOp,
                 BitArrayCalcState.WaitingForArg => BitArrayCalcState.WaitingForOp,
                 BitArrayCalcState.WaitingForOp => BitArrayCalcState.WaitingForArg,
-                _ => _state
+                _ => BitArrayCalcState.WaitingForStart
             };
         }
     }
