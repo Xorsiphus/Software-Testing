@@ -1,0 +1,9 @@
+﻿<Application x:Class="UIAutoTesting.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:orderEntity="clr-namespace:UIAutoTesting.OrderEntity"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <orderEntity:OrderStatic x:Key="Order"/>
+    </Application.Resources>
+</Application>

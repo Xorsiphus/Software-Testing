@@ -18,6 +18,13 @@ Lab_4/BitArrayTesting/BitArrayExtensions/obj
 Lab_4/BitArrayTesting/BitArrayNUnit/bin
 Lab_4/BitArrayTesting/BitArrayNUnit/obj
 
+Lab_5/UIAutoTesting/.idea
+Lab_5/UIAutoTesting/packages
+Lab_5/UIAutoTesting/UIAutoTesting/bin
+Lab_5/UIAutoTesting/UIAutoTesting/obj
+Lab_5/UIAutoTesting/UITestingProject/bin
+Lab_5/UIAutoTesting/UITestingProject/obj
+
 *.docx
 *.7z
 *.zip
