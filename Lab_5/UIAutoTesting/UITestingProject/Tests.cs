@@ -9,6 +9,8 @@ using TestStack.White.Factory;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.ListBoxItems;
 using TestStack.White.UIItems.WindowItems;
+using UIAutoTesting.FormData;
+
 
 namespace UITestingProject
 {
@@ -57,16 +59,16 @@ namespace UITestingProject
             timeTextBox.BulkText = "21:00";
 
             var pizzaNameComboBox = _window.Get<ComboBox>("PizzaNameComboBox");
-            pizzaNameComboBox.Select(3);
+            pizzaNameComboBox.Select(PizzaNameData.PizzaPublicName(PizzaNameData.Name.Mexican));
 
             var pizzaSizeComboBox = _window.Get<ComboBox>("PizzaSizeComboBox");
-            pizzaSizeComboBox.Select(2);
+            pizzaSizeComboBox.Select(PizzaSizeData.SizePublicName(PizzaSizeData.Size.Large));
 
             var drinksComboBox = _window.Get<ComboBox>("DrinksComboBox");
-            drinksComboBox.Select(1);
+            drinksComboBox.Select(DrinksData.DrinkPublicName(DrinksData.Drink.Soda));
 
             var saucesComboBox = _window.Get<ComboBox>("SaucesComboBox");
-            saucesComboBox.Select(0);
+            saucesComboBox.Select(SauceData.SaucePublicName(SauceData.Sauce.Mayonnaise));
 
             var submitButton = _window.Get<Button>("OrderSubmitButton");
             submitButton.Click();

@@ -16,18 +16,18 @@ namespace UIAutoTesting.FormData
             Large
         }
         
+        public static string SizePublicName(Size size) =>
+            size switch
+            {
+                Size.Small => "маленькая",
+                Size.Medium => "средняя",
+                Size.Large => "большая",
+                _ => throw new ArgumentOutOfRangeException(nameof(Size), size, null)
+            };
+        
         public class PizzaSize
         {
             public Size Size { get; set; }
-
-            public string SizeName =>
-                Size switch
-                {
-                    Size.Small => "маленькая",
-                    Size.Medium => "средняя",
-                    Size.Large => "большая",
-                    _ => throw new ArgumentOutOfRangeException(nameof(Size), Size, null)
-                };
 
             public PizzaSize(Size size)
             {
@@ -36,7 +36,7 @@ namespace UIAutoTesting.FormData
 
             public override string ToString()
             {
-                return SizeName;
+                return SizePublicName(Size);
             }
         }
     }

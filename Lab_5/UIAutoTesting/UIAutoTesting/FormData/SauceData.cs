@@ -17,19 +17,19 @@ namespace UIAutoTesting.FormData
             Garlic,
         }
 
+        public static string SaucePublicName(Sauce sauce) =>
+            sauce switch
+            {
+                Sauce.Mayonnaise => "Майонезный",
+                Sauce.Ketchup => "Томатный",
+                Sauce.Cheese => "Сырный",
+                Sauce.Garlic => "Чесночный",
+                _ => throw new ArgumentOutOfRangeException(nameof(Sauce), sauce, null)
+            };
+        
         public class SauceName
         {
             public Sauce Sauce { get; set; }
-
-            public string SaucePublicName =>
-                Sauce switch
-                {
-                    Sauce.Mayonnaise => "Майонезный",
-                    Sauce.Ketchup => "Томатный",
-                    Sauce.Cheese => "Сырный",
-                    Sauce.Garlic => "Чесночный",
-                    _ => throw new ArgumentOutOfRangeException(nameof(Sauce), Sauce, null)
-                };
 
             public SauceName(Sauce sauce)
             {
@@ -38,7 +38,7 @@ namespace UIAutoTesting.FormData
 
             public override string ToString()
             {
-                return SaucePublicName;
+                return SaucePublicName(Sauce);
             }
         }
     }

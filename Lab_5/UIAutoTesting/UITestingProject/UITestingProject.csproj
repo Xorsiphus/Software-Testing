@@ -56,6 +56,12 @@
     <ItemGroup>
       <None Include="packages.config" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\UIAutoTesting\UIAutoTesting.csproj">
+        <Project>{bdf5cf12-6b5d-4bdb-8171-3040e68a92c9}</Project>
+        <Name>UIAutoTesting</Name>
+      </ProjectReference>
+    </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.

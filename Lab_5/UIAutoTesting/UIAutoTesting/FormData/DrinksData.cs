@@ -16,21 +16,21 @@ namespace UIAutoTesting.FormData
             Juice,
             Water,
         }
+        
+        public static string DrinkPublicName(Drink drink) =>
+            drink switch
+            {
+                Drink.Tea => "Чай",
+                Drink.Soda => "Газировка",
+                Drink.Juice => "Сок",
+                Drink.Water => "Вода",
+                _ => throw new ArgumentOutOfRangeException(nameof(Drink), drink, null)
+            };
 
         public class DrinkName
         {
             public Drink Drink { get; set; }
-
-            public string DrinkPublicName =>
-                Drink switch
-                {
-                    Drink.Tea => "Чай",
-                    Drink.Soda => "Газировка",
-                    Drink.Juice => "Сок",
-                    Drink.Water => "Вода",
-                    _ => throw new ArgumentOutOfRangeException(nameof(Drink), Drink, null)
-                };
-
+            
             public DrinkName(Drink drink)
             {
                 Drink = drink;
@@ -38,7 +38,7 @@ namespace UIAutoTesting.FormData
 
             public override string ToString()
             {
-                return DrinkPublicName;
+                return DrinkPublicName(Drink);
             }
         }
     }

@@ -18,23 +18,23 @@ namespace UIAutoTesting.FormData
             Florida,
             Bavarian,
         }
+        
+        public static string PizzaPublicName(Name name) =>
+            name switch
+            {
+                Name.Neapolitan => "Неаполитана",
+                Name.Siberian => "Сибирская",
+                Name.Spicy => "Пикантная",
+                Name.Mexican => "Мексиканская",
+                Name.Florida => "Флорида",
+                Name.Bavarian => "Баварская",
+                _ => throw new ArgumentOutOfRangeException(nameof(Name), name, null)
+            };
 
         public class PizzaName
         {
             public Name Name { get; set; }
-
-            public string PizzaPublicName =>
-                Name switch
-                {
-                    Name.Neapolitan => "Неаполитана",
-                    Name.Siberian => "Сибирская",
-                    Name.Spicy => "Пикантная",
-                    Name.Mexican => "Мексиканская",
-                    Name.Florida => "Флорида",
-                    Name.Bavarian => "Баварская",
-                    _ => throw new ArgumentOutOfRangeException(nameof(Name), Name, null)
-                };
-
+            
             public PizzaName(Name name)
             {
                 Name = name;
@@ -42,7 +42,7 @@ namespace UIAutoTesting.FormData
 
             public override string ToString()
             {
-                return PizzaPublicName;
+                return PizzaPublicName(Name);
             }
         }
     }
