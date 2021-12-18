@@ -25,6 +25,17 @@ Lab_5/UIAutoTesting/UIAutoTesting/obj
 Lab_5/UIAutoTesting/UITestingProject/bin
 Lab_5/UIAutoTesting/UITestingProject/obj
 
+Lab_6/BitArrayTesting/.idea
+Lab_6/BitArrayTesting/.vs
+Lab_6/BitArrayTesting/BitArrayExtensions/bin
+Lab_6/BitArrayTesting/BitArrayExtensions/obj
+Lab_6/BitArrayTesting/BitArrayNUnit/bin
+Lab_6/BitArrayTesting/BitArrayNUnit/obj
+Lab_6/BitArrayTesting/BitArrayXUnit/bin
+Lab_6/BitArrayTesting/BitArrayXUnit/obj
+Lab_6/BitArrayTesting/CustomContractImplementation/bin
+Lab_6/BitArrayTesting/CustomContractImplementation/obj
+
 *.docx
 *.7z
 *.zip
